@@ -286,301 +286,49 @@ nav a:hover::after {
   margin-top: auto; /* Pushes button to the bottom */
 }
 
-/* About Section Specific */
-.about-grid {
-  grid-template-columns: 1fr 1fr; /* Two columns for text and image */
+/* Footer */
+footer {
+  background: #004225; /* DoBu Green */
+  color: white;
+  text-align: center; /* Ensures text is centered */
+  padding: 2rem 1.5rem;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.about-grid .grid-item {
-  box-shadow: none; /* Remove shadow for this specific grid item */
-  background: transparent; /* Remove background for this specific grid item */
-  padding: 0;
+footer .social-icons {
+  margin-bottom: 1rem;
 }
 
-.about-grid .grid-item.text-content {
-  text-align: left;
-  padding-left: 2rem;
-}
-
-.about-grid .grid-item img {
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Packages/Pricing */
-.package-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.package-item {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 2px solid transparent;
-  display: flex;
-  flex-direction: column;
-}
-
-.package-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  border-color: #FFD700;
-}
-
-.package-item.featured {
-  border-color: #FFD700;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transform: scale(1.03);
-}
-
-.package-item h4 {
-  font-size: 1.6rem;
-  color: #004225;
-  margin-bottom: 0.8rem;
-}
-
-.package-item .price {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #FFD700;
-  margin-bottom: 1.5rem;
-}
-
-.package-item .price span {
-  font-size: 1rem;
-  font-weight: normal;
-  color: #555;
-}
-
-.package-item ul {
-  text-align: left;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.package-item ul li {
-  margin-bottom: 0.7rem;
-  font-size: 1rem;
-  color: #444;
-}
-
-.package-item ul li i {
-  color: #004225;
-  margin-right: 0.5rem;
-}
-
-.package-item .btn {
-  margin-top: auto; /* Pushes button to the bottom */
-  width: 100%;
-}
-
-/* Schedule Table */
-.schedule-table {
-  overflow-x: auto; /* Enables horizontal scrolling on small screens */
-  margin-top: 3rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-}
-
-.schedule-table table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 700px; /* Ensures table doesn't get too narrow */
-}
-
-.schedule-table th,
-.schedule-table td {
-  border: 1px solid #eee;
-  padding: 1rem;
-  text-align: center;
-}
-
-.schedule-table th {
-  background-color: #004225;
+footer .social-icons a {
   color: white;
-  font-weight: bold;
-  white-space: nowrap;
+  font-size: 2rem; /* Adjust icon size for better visibility */
+  margin: 0 1rem; /* Space out the icons */
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.schedule-table td {
-  background-color: #fdfdfd;
-  color: #555;
+footer .social-icons a:hover {
+  color: #FFD700; /* Gold accent on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-/* Forms */
-.form-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-form {
-  background: #fff4e3; /* Cream with peachy warmth */
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 0.9rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fffaf3;
-  font-size: 1rem;
-  color: #333;
-}
-
-form input:focus,
-form select:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #004225;
-  box-shadow: 0 0 0 3px rgba(0, 66, 37, 0.1);
-}
-
-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-form button {
-  width: 100%;
-  background: #004225;
-  color: white;
-  border: none;
-  padding: 1rem;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-  background: #005a3a;
-  transform: translateY(-2px);
-}
-
-.form-link {
-  text-align: center;
-  margin-top: 1rem;
+footer p {
   font-size: 0.95rem;
 }
 
-.form-link a {
-  color: #004225;
-  font-weight: bold;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-  .hero-text p {
-    font-size: 1.3rem;
-  }
-  .about-grid {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
-  }
-  .about-grid .grid-item.text-content {
-    padding-left: 0;
-    text-align: center;
-  }
-  .about-grid .grid-item img {
-    margin-bottom: 1.5rem;
-  }
-}
-
+/* Footer Responsive Design */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 1rem;
+  footer {
+    padding: 1.5rem 1rem;
   }
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
+  footer .social-icons {
+    margin-bottom: 0.8rem;
   }
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .logo a {
-    font-size: 1.5rem;
-  }
-  .hero-text h1 {
-    font-size: 2.8rem;
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-  .hero-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .hero-buttons .btn {
-    width: 80%;
-    max-width: 300px;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  .section-padding {
-    padding: 3rem 1rem;
-    margin: 1.5rem auto;
-  }
-  .grid-container {
-    grid-template-columns: 1fr; /* Stack all grid items */
-  }
-  .package-item.featured {
-    transform: scale(1.0); /* Remove scale effect on small screens */
-  }
-  .form-container {
-    grid-template-columns: 1fr;
-  }
-  .schedule-table {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-text p {
+  footer p {
     font-size: 1rem;
-  }
-  .btn {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  .package-item .price {
-    font-size: 2rem;
-  }
-  .schedule-table th,
-  .schedule-table td {
-    padding: 0.8rem 0.5rem;
-    font-size: 0.9rem;
   }
 }
